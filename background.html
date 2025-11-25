@@ -1,0 +1,496 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* fullscreen background */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slideAnimation 16s infinite;
+}
+
+/* Each slide shows for 4 seconds (16s / 4 images) */
+.slide1 {
+    background-image: url(IMAGES/2000_643f9cb24e84b.webp);
+    animation-delay: 0s;
+}
+.slide2 {
+    background-image: url(IMAGES/johannes-plenio-qkfxBc2NQ18-unsplash.jpg);
+    animation-delay: 4s;
+}
+.slide3 {
+    background-image: url(IMAGES/miriana-doroban-u-4cwr3_wCZo8-unsplash.jpg);
+    animation-delay: 8s;
+}
+.slide4 {
+    background-image: url(IMAGES/recal-media-ueBIGLmiI5A-unsplash.jpg);
+    animation-delay: 12s;
+}
+
+@keyframes slideAnimation {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    25% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="slider">
+    <div class="slide slide1"></div>
+    <div class="slide slide2"></div>
+    <div class="slide slide3"></div>
+    <div class="slide slide4"></div>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circular Progress Bar</title>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #ffffff;
+        font-family: Arial, sans-serif;
+    }
+
+
+    .progress-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: conic-gradient(
+            #c9a86a var(--progress),
+            #333 var(--progress)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+
+    .circle-inner {
+        width: 100px;
+        height: 100px;
+        background: var(--ground);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color4);
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="progress-container">
+    <h5>videography </h5>
+    <div class="circle" id="circle" style="--progress: 0deg;">
+        <div class="circle-inner" id="progressText">0%</div>
+    </div>
+</div>
+
+<script>
+    let value = 0;
+    let finalValue = 90; // Change this to any progress you want
+
+    let progress = setInterval(() => {
+        if (value >= finalValue) {
+            clearInterval(progress);
+        } else {
+            value++;
+            let angle = (value / 100) * 360 + "deg";
+            
+            document.getElementById("circle").style.setProperty("--progress", angle);
+            document.getElementById("progressText").textContent = value + "%";
+        }
+    }, 20);
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8 Circular Progress Bars</title>
+
+<style>
+    body {
+        background: #ffffff;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 40px;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .progress-box {
+        text-align: center;
+    }
+
+    .progress-container {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        margin: auto;
+    }
+
+    .circle {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: conic-gradient(
+            #c9a86a var(--progress),
+            #d9d9d9 var(--progress)
+        );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease;
+    }
+
+    .circle-inner {
+        width: 110px;
+        height: 110px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #c9a86a;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    h4 {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #333;
+        font-weight: 600;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="progress-box">
+        <div class="progress-container">
+            <div class="circle" data-target="90">
+                <div class="circle-inner">0%</div>
+            </div>
+        </div>
+        <h4>Videography</h4>
+    </div>
+
+    <div class="progress-box">
+        <div class="progress-container">
+            <div class="circle" data-target="85">
+                <div class="circle-inner">0%</div>
+            </div>
+        </div>
+        <h4>Editing</h4>
+    </div>
+
+    <div class="progress-box">
+        <div class="progress-container">
+            <div class="circle" data-target="75">
+                <div class="circle-inner">0%</div>
+            </div>
+        </div>
+        <h4>Color Grading</h4>
+    </div>
+
+    <div class="progress-box">
+        <div class="progress-container">
+            <div class="circle" data-target="92">
+                <div class="circle-inner">0%</div>
+            </div>
+        </div>
+        <h4>Directing</h4>
+    </div>
+
+    <div class="progress-box">
+        <div class="progress-container">
+            <div class="circle" data-target="88">
+                <div class="circle-inner">0%</div>
+            </div>
+        </div>
+        <h4>Storytelling</h4>
+    </div>
+
+    <div class="progress-box">
+        <div class="progress-container">
+            <div class="circle" data-target="80">
+                <div class="circle-inner">0%</div>
+            </div>
+        </div>
+        <h4>Sound Design</h4>
+    </div>
+
+    <div class="progress-box">
+        <div class="progress-container">
+            <div class="circle" data-target="70">
+                <div class="circle-inner">0%</div>
+            </div>
+        </div>
+        <h4>Animation</h4>
+    </div>
+
+    <div class="progress-box">
+        <div class="progress-container">
+            <div class="circle" data-target="95">
+                <div class="circle-inner">0%</div>
+            </div>
+        </div>
+        <h4>Photography</h4>
+    </div>
+</div>
+
+<script>
+    const circles = document.querySelectorAll(".circle");
+
+    circles.forEach(circle => {
+        let value = 0;
+        let finalValue = parseInt(circle.getAttribute("data-target"));
+        let text = circle.querySelector(".circle-inner");
+
+        let animation = setInterval(() => {
+            if (value >= finalValue) {
+                clearInterval(animation);
+            } else {
+                value++;
+                let angle = (value / 100) * 360 + "deg";
+                circle.style.setProperty("--progress", angle);
+                text.textContent = value + "%";
+            }
+        }, 20);
+    });
+</script>
+
+</body>
+</html>
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Columns Gallery</title>
+<style>
+  body{ font-family: system-ui, sans-serif; 
+    background:#faf9f8; 
+    padding:32px; }
+  .cols {
+    column-width: 260px;  /* ideal column width */
+    column-gap: 10px;
+    max-width:1800px;
+    margin: 0 auto;
+  }
+  .cols figure {
+    break-inside: avoid;
+    margin: 0 0 18px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    background:#fff;
+  }
+  .cols img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:cover;
+  }
+  .cols figcaption{
+    padding:10px;
+    font-size:.9rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="cols">
+  <figure><img src="IMAGES/2000_643f9cb24e84b.webp" alt=""><figcaption>Caption</figcaption></figure>
+  <figure><img src="IMAGES/2000_643fb972dce92.webp" alt=""><figcaption>Caption</figcaption></figure>
+  <figure><img src="IMAGES/about.webp" alt=""><figcaption>Caption</figcaption></figure>
+  <figure><img src="IMAGES/pic1.webp" alt=""><figcaption>Caption</figcaption></figure>
+  <figure><img src="IMAGES/pic2.webp" alt=""><figcaption>Caption</figcaption></figure>
+  <figure><img src="IMAGES/pic3.webp" alt=""><figcaption>Caption</figcaption></figure>
+  <figure><img src="IMAGES/pic4.webp" alt=""><figcaption>Caption</figcaption></figure>
+  
+</div>
+
+</body>
+</html>
+-->
+<style>
+    /* ---- LUXURY FOOTER ---- */
+
+.lux-footer {
+    background: #0d0d0d;
+    padding: 70px 20px 30px;
+    color: #e4e4e4;
+    font-family: "Playfair Display", serif;
+    border-top: 1px solid rgba(255, 215, 128, 0.2);
+}
+
+.lux-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 50px;
+}
+
+.lux-title {
+    font-size: 1.8rem;
+    color: #d7b26a;
+    margin-bottom: 12px;
+}
+
+.lux-heading {
+    font-size: 1.2rem;
+    color: #d7b26a;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.lux-text {
+    color: #c8c8c8;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.lux-links {
+    list-style: none;
+    padding: 0;
+}
+
+.lux-links li {
+    margin: 10px 0;
+}
+
+.lux-links a {
+    text-decoration: none;
+    color: #c8c8c8;
+    transition: 0.3s;
+}
+
+.lux-links a:hover {
+    color: #d7b26a;
+    padding-left: 5px;
+}
+
+.lux-socials a {
+    display: block;
+    color: #c8c8c8;
+    margin: 8px 0;
+    transition: 0.3s;
+}
+
+.lux-socials a:hover {
+    color: #d7b26a;
+    letter-spacing: 1px;
+}
+
+.lux-bottom {
+    text-align: center;
+    padding-top: 40px;
+    color: #888;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 215, 128, 0.1);
+    margin-top: 40px;
+}
+
+</style>
+<footer class="lux-footer">
+    <div class="lux-container">
+
+        <div class="lux-section">
+            <h3 class="lux-title">Francis Oduor</h3>
+            <p class="lux-text">Crafting timeless visual stories with cinematic precision and refined artistry.</p>
+        </div>
+
+        <div class="lux-section">
+            <h4 class="lux-heading">Explore</h4>
+            <ul class="lux-links">
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">The Craft</a></li>
+                <li><a href="#">Client Reflections</a></li>
+                <li><a href="#">Connect Privately</a></li>
+            </ul>
+        </div>
+
+        <div class="lux-section">
+            <h4 class="lux-heading">Get in Touch</h4>
+            <p class="lux-text">Nairobi, Kenya</p>
+            <p class="lux-text">Phone: 0701 185 813</p>
+            <p class="lux-text">Email: info@francisoduor.com</p>
+        </div>
+
+        <div class="lux-section">
+            <h4 class="lux-heading">Follow</h4>
+            <div class="lux-socials">
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+                <a href="#">TikTok</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="lux-bottom">
+        © 2025 Francis Oduor — Crafted with Excellence
+    </div>
+</footer>
