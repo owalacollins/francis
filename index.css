@@ -63,7 +63,7 @@ section{
 #hed {
     position: relative;
     width: 100%;
-    height: 100vh; /* fullscreen background */
+    height: 90vh; /* fullscreen background */
     overflow: auto;
    
 }
