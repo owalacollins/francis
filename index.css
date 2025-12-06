@@ -8,7 +8,8 @@
   --color1:#E9B63B;
   --color2:#758A93;
   --color3:#ECD5BC;
-  --color4:#37353E;
+/* --color4:#37353E; */
+   --color4:#3a5a40;
    --ground:#F6F1E9;
 }
 body{
@@ -335,7 +336,7 @@ margin-left:100px ;
 /* footer  stylings starts here -------------------------------------------------------------------------------------------------------*/
 
 .lux-footer {
-    background: #0d0d0d;
+    background:#344e41;
     padding: 70px 20px 30px;
     color: #e4e4e4;
     font-family: "Playfair Display", serif;
