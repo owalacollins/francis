@@ -5,7 +5,7 @@
     text-decoration: none;
 }
 :root{
-  --color1:#E9B63B;
+  --color1:hsl(50, 38%, 58%);
   --color2:#758A93;
   --color3:#ECD5BC;
 /* --color4:#37353E; */
@@ -145,25 +145,25 @@ header ul li a{
 
 /* Each slide shows for 4 seconds (16s / 4 images) */
 .slide1 {
-    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/2000_643f9cb24e84b.webp);
+    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/back1.jpg);
     background-position: center;
     background-size: cover;
     animation-delay: 0s;
 }
 .slide2 {
-    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/2000_643fba5020b9f.webp);
+    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/back2.jpg);
     background-position: center;
     background-size: cover;
     animation-delay: 4s;
 }
 .slide3 {
-    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/2000_643fba74aab65.webp);
+    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/back3.jpg);
     background-position: center;
     background-size: cover;
     animation-delay: 8s;
 }
 .slide4 {
-    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/2000_643fb972dce92.WEBP);
+    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/back4.jpg);
    background-position: center;
     background-size: cover;
     animation-delay: 12s;
@@ -191,7 +191,9 @@ header ul li a{
 .about img{
   width: 30vw;
   height: auto;
-   box-shadow: 0 0 20px 30px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.429);
+
+
 }
 .about .right{
   margin-top: 40px;
@@ -268,7 +270,7 @@ header ul li a{
         height: 140px;
         border-radius: 50%;
         background: conic-gradient(
-            #c9a86a var(--progress),
+            hsl(50, 38%, 58%) var(--progress),
             var(--ground) var(--progress)
         );
         display: flex;
@@ -468,6 +470,31 @@ margin-left:100px ;
   background: linear-gradient(90deg, var(--color3),black,var(--color3));
 
 
+}
+/* Each slide shows for 4 seconds (16s / 4 images) */
+.slide1 {
+    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/back5.jpg);
+    background-position: center;
+    background-size: cover;
+    animation-delay: 0s;
+}
+.slide2 {
+    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/back6.webp);
+    background-position: center;
+    background-size: cover;
+    animation-delay: 4s;
+}
+.slide3 {
+    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/back7.jpg);
+    background-position: center;
+    background-size: cover;
+    animation-delay: 8s;
+}
+.slide4 {
+    background:linear-gradient(rgba(0, 0, 0, 0.389),rgba(0, 0, 0, 0.389)),url(IMAGES/back8.jpg);
+   background-position: center;
+    background-size: cover;
+    animation-delay: 12s;
 }
 
 .about{
