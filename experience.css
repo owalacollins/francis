@@ -31,8 +31,7 @@
         }
           #hed img{
     
-            height:400px;
-            
+            height:60%;
             border:  hsl(30, 32%, 85%) 5px solid;
             padding: 10px;
         }
@@ -209,7 +208,9 @@ header ul li a{
   word-spacing: 4px;
   font-style: normal;
   color: rgba(0, 0, 0, 0.766);
-  }
+  text-align: justify;
+}
+ 
   .par{
     margin-top: 30px;
     text-align: justify;
@@ -440,9 +441,7 @@ header ul li a{
           color: hsl(30, 32%, 50%);
           padding: 10PX;
        }
-      .left h3,h4{
-        
-      }
+    
       .right{
         width: 100%;
         display: flex;

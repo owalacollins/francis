@@ -212,6 +212,7 @@ header ul li a{
   line-height: 1.2em;
   letter-spacing: 1px;
   color: var(--color2);
+  
 }
  h2{
   font-family: "Playfair Display", serif;
@@ -231,6 +232,7 @@ header ul li a{
   padding: 10px;
   color: var(--color1);
 }
+
 .icons i{
   font-size: 40px;
   color: var(--color1);
@@ -313,7 +315,7 @@ header ul li a{
     column-gap: 10px;
     margin: 0 auto;
     padding: 20px;
-    width: 1500px;
+    width: 98vw;
     
   }
   .cols figure {
