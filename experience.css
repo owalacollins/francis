@@ -208,12 +208,12 @@ header ul li a{
   word-spacing: 4px;
   font-style: normal;
   color: rgba(0, 0, 0, 0.766);
-  text-align: justify;
+  text-align: center;
 }
  
   .par{
     margin-top: 30px;
-    text-align: justify;
+    text-align: center;
   }
   .hedin{
     border-left: 5px solid rgb(167, 183, 78);
