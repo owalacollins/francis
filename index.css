@@ -498,10 +498,13 @@ margin-left:100px ;
     background-size: cover;
     animation-delay: 12s;
 }
+#about{
+
+  padding: 0px;
+}
 
 .about{
   padding: 10px;
- 
   display: flex;
   justify-content:space-around;
   align-items:flex-start;
